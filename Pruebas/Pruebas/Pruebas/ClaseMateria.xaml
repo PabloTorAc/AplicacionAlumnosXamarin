@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pruebas.ClaseMateria">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#103057" Padding="40">
+                <Label Text="Materias Alumnos UCQ"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"/>
+                <Image Source="descarga.jpeg"
+                       Margin="30"/>
+                <Label Text=" "
+                       HorizontalOptions="CenterAndExpand"/>
+                <Frame BackgroundColor="white" CornerRadius="5" Padding="5" Margin="0,0,0,10">
+                    <Entry x:Name="IdEntry"
+                           Placeholder="Id Materia"/>
+                </Frame>
+                <Frame BackgroundColor="white" CornerRadius="5" Padding="5" Margin="0,0,0,10">
+                    <Entry x:Name="NombreEntry" Placeholder="Nombre Materia"/>
+                </Frame>
+                <Frame BackgroundColor="white" CornerRadius="5" Padding="5" Margin="0,0,0,10">
+                    <Entry x:Name="CalificacionEntry" Placeholder="Calificación"/>
+                </Frame>
+                <Frame BackgroundColor="white" CornerRadius="5" Padding="5" Margin="0,0,0,10">
+                    <Entry x:Name="NivelEntry" Placeholder="Nivel de clase"/>
+                </Frame>
+                <Frame BackgroundColor="White" CornerRadius="5" Padding="5" Margin="0,0,0,10">
+                    <Picker x:Name="pickerAlumno" Title="Lista de alumnos">
+
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Alumno 1</x:String>
+                                <x:String>Alumno 2</x:String>
+                                <x:String>Alumno 3</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+
+                    </Picker>
+                </Frame>
+                <Frame BackgroundColor="white" CornerRadius="5" Padding="5" Margin="0,0,0,10">
+                    <Entry x:Name="ProfesorEntry" Placeholder="Profesor"/>
+                </Frame>
+                <Frame BackgroundColor="white" CornerRadius="5" Padding="5" Margin="0,0,0,10">
+                    <Entry x:Name="ProgramaEntry" Placeholder="Programa Educativo"/>
+                </Frame>
+
+                <StackLayout Orientation="Horizontal" Margin="0,0,0,50">
+                    <Button Text="Guardar" BackgroundColor="#007bff" TextColor="White" HorizontalOptions="StartAndExpand"
+                            CornerRadius="5" Clicked="MetodoGuardarMateria"/>
+                    <Button Text="Mostrar" BackgroundColor="#007bff" TextColor="White" HorizontalOptions="CenterAndExpand"
+                            CornerRadius="5" Clicked="MetodoMostrarMateria"/>
+                    <Button Text="Regresar" BackgroundColor="#007bff" TextColor="White" HorizontalOptions="EndAndExpand"
+                            CornerRadius="5" Clicked="Regreso"/>
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pruebas.Menu">
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Text="Alumno UCQ" BackgroundColor="#103057" TextColor="White" CornerRadius="10" Margin="20"
+                    FontSize="Large" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="AltaAlumno"/>
+
+            <Button Text="Empleado UCQ" BackgroundColor="#103057" TextColor="White" CornerRadius="10" Margin="20"
+                    FontSize="Large" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Column="1" />
+
+            <Button Text="Ingreso modulo : Test API AZURE - UCQ" BackgroundColor="#103057" TextColor="White" CornerRadius="10" Margin="20"
+                    FontSize="Large" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="1" Clicked="PruebaApi"/>
+
+            <Button Text="Opción 4" BackgroundColor="#103057" TextColor="White" CornerRadius="10" Margin="20"
+                    FontSize="Large" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="1" />
+
+            <Button Text="Opción 5" BackgroundColor="#103057" TextColor="White" CornerRadius="10" Margin="20"
+                    FontSize="Large" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" />
+
+            <Button Text="EE" BackgroundColor="#103057" TextColor="White" CornerRadius="10" Margin="20"
+                    FontSize="Large" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="1" 
+                    Clicked="EE"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

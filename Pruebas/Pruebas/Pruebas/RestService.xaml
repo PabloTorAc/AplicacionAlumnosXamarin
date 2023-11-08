@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pruebas.RestService">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Prueba API Azure"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button
+                Text="Prueba API Azure"
+                x:Name="buttonPruebaApi"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                Clicked="SaveTodoItemAsync"/>
+
+            <Button
+                Text="Actualiza API Azure"
+                x:Name="buttonActualizaApi"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                Clicked="RefreshDataAsync"/>
+
+            <Button Text="Consulta Api"
+                    x:Name="buttonConsultaApp"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    Clicked="ConsultarTodoItemAsync"/>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

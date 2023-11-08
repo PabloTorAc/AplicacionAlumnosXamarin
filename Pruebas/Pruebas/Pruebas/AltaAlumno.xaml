@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pruebas.AltaAlumno">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Frame BackgroundColor="#103057" HorizontalOptions="FillAndExpand" Padding="20" Margin="20" CornerRadius="20">
+                    <StackLayout>
+                        <Label Text="Formulario de Alta de Alumno" FontSize="Large" FontAttributes="Bold" TextColor="White" 
+                               HorizontalOptions="Center" Margin="0,0,0,20" HorizontalTextAlignment="Center"/>
+
+                        <Frame BackgroundColor="White" CornerRadius="5" Padding="5" Margin="0,0,0,10">
+                            <Entry Placeholder="Nombre" x:Name="NombreEntry" />
+                        </Frame>
+                        <Frame BackgroundColor="White" CornerRadius="5" Padding="5" Margin="0,0,0,10">
+                            <Entry Placeholder="Domicilio" x:Name="DomicilioEntry" />
+                        </Frame>
+
+                        <Frame BackgroundColor="White" CornerRadius="5" Padding="5" Margin="0,0,0,10">
+                            <Entry Placeholder="Matrícula" x:Name="MatriculaEntry" />
+                        </Frame>
+
+                        <Frame BackgroundColor="White" CornerRadius="5" Padding="5" Margin="0,0,0,10">
+                            <Entry Placeholder="NivelClase" x:Name="NivelClaseEntry" />
+                        </Frame>
+
+                        <Frame BackgroundColor="White" CornerRadius="5" Padding="5" Margin="0,0,0,10">
+                            <Picker x:Name="pickerCarrera" Title="Selecciona la carrera">
+
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Administración de empresas</x:String>
+                                        <x:String>Ingenieria en sistemas computacionales</x:String>
+                                        <x:String>Odontología</x:String>
+                                        <x:String>Contenidos digitales</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+
+                            </Picker>
+                        </Frame>
+
+                        <Button Text="Guardar" BackgroundColor="#007bff" TextColor="White" CornerRadius="5"
+                                Margin="0,0,0,40" Clicked="metodoCrear"/>
+
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#103057" HorizontalOptions="FillAndExpand" Margin="20" Padding="20" CornerRadius="20">
+                    <StackLayout>
+
+                        <Frame BackgroundColor="White" CornerRadius="5" Padding="5" Margin="0,0,0,10">
+                            <Picker
+                                    x:Name="pickerAlumnoConsulta"
+                                    Title="Elige Alumo">
+
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Alumno 1</x:String>
+                                        <x:String>Alumno 2</x:String>
+                                        <x:String>Alumno 3</x:String>
+                                        <x:String>Alumno 4</x:String>
+                                        <x:String>Alumno 5</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+
+                            </Picker>
+                        </Frame>
+
+                        <StackLayout>
+                            <Button Text="Consultar" BackgroundColor="#007bff" TextColor="White" CornerRadius="5" 
+                                    Margin="0,0,0,10" Clicked="metodoConsultar"/>
+
+                            <Button Text="Array Alumnos" BackgroundColor="#007bff" TextColor="White" CornerRadius="5" 
+                                    Margin="0,0,0,10" Clicked="metodoArrayAlumno"/>
+
+                            <Button Text="Agregar Materia Alumno" BackgroundColor="#007bff" TextColor="White" CornerRadius="5" 
+                                    Margin="0,0,0,40"/>
+                            
+                        </StackLayout>
+
+
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#103057" HorizontalOptions="FillAndExpand" Margin="20" Padding="20" CornerRadius="20">
+                    <Button Text="Acceso Materias" Background="#007bff" TextColor="White" CornerRadius="5" Margin="0,0,0,40"
+                            Clicked="ClaseMateria"/>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>
